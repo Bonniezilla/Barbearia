@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    height: 200vh;
+    width: 100vw;
+    font-family: 'Karla';
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(33, 26, 19);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: rgb(235, 220, 211);
+    display: inline;
+    float: right;
+    font-size: 35px;
+}
+
+nav li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(235, 220, 211);
+}
+
+nav li a:last-of-type {
+    margin-right: 5vw;
+}
+
+nav li:first-of-type {
+    float: left;
+}
+
+a img {
+    width: 190px;
+    height: 20vh;
+    image-rendering: optimizeQuality
+}
+
+header {
+    background: rgb(235, 220, 211);
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 38vw 1fr;
+}
+
+header .text {
+    display: grid;
+    position: relative;
+    grid-template: 100px 100px 1fr 100px / 100px 1fr 100px;
+}   
+
+header .text h1 {
+    grid-column: 2 / 3;
+    text-align: center;
+    padding: 30px;
+}
+
+header .text p {
+    font-weight: 400;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+header .text img {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    transform: rotate(270deg);
+    left: 21%;
+    top: 30%;
+    animation: scissorAnimation 2s infinite;
+}
+
+header img {
+    height: 80vh;
+}
+
+header .img {
+    grid-column: 2 / 3;
+}
+
+@keyframes scissorAnimation {
+    50% {
+        transform: rotate(260deg);
+    }
+   
+   100% {
+    transform: rotate(270deg);
+   }
+}
