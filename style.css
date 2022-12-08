@@ -11,6 +11,8 @@ body {
     width: 100vw;
     font-family: 'Karla';
     background-size: cover;
+    display: grid;
+    grid-template-rows: 20vh 80vh ;
 }
 
 nav {
@@ -61,57 +63,20 @@ a img {
 }
 
 header {
-    background: rgb(235, 220, 211);
+    background: white;
     height: 80vh;
+    display: flex;
+}
+
+header div {
+    image-rendering: optimizeQuality;
     display: grid;
-    grid-template-columns: 38vw 1fr;
-}
-
-header .text {
-    display: grid;
-    position: relative;
-    grid-template: 100px 100px 1fr 100px / 100px 1fr 100px;
-}   
-
-header .text h1 {
-    grid-column: 2 / 3;
-    text-align: center;
-    padding: 30px;
-}
-
-header .text p {
-    font-weight: 400;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    text-align: center;
-}
-
-header .text img {
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-    transform: rotate(270deg);
-    left: 21%;
-    top: 30%;
-    animation: scissorAnimation 2s infinite;
+    align-items: center;
+    justify-items: center;
+    height: 70%;
 }
 
 header img {
-    height: 80vh;
-}
-
-header .img {
-    grid-column: 2 / 3;
-}
-
-@keyframes scissorAnimation {
-    50% {
-        transform: rotate(260deg);
-    }
-   
-   100% {
-    transform: rotate(270deg);
-   }
+    max-width: 33vw;
+    max-height: 100%;
 }
