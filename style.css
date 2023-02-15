@@ -12,7 +12,7 @@ body {
     font-family: 'Karla';
     background-size: cover;
     display: grid;
-    grid-template-rows: 20vh 80vh ;
+    grid-template-rows: 20vh 80vh;
 }
 
 nav {
@@ -24,7 +24,6 @@ nav {
     height: 20vh;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 nav ul {
@@ -68,15 +67,35 @@ header {
     display: flex;
 }
 
-header div {
+header .cortes {
     image-rendering: optimizeQuality;
     display: grid;
+    grid-template-rows: 50vh 30vh ;
     align-items: center;
     justify-items: center;
     height: 70%;
+    animation: cortesAnimation 2s;
+}
+
+header .precos {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header img {
     max-width: 33vw;
     max-height: 100%;
+}
+
+@keyframes cortesAnimation {
+    0% {
+        margin-left: 84px;
+    }
+
+    100% {
+
+    }
 }
